@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>SISTEMA INTEGRAL DE ADMINISTRACIÓN DE ACTIVOS | Centro Educativo Rodríguez Tamayo</title>
+	<title>MarkCRM | Grupo SETIC</title>
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
