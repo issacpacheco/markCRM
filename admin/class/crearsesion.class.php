@@ -5,7 +5,7 @@ use conexionbd\mysqlconsultas;
 
 class newsesion extends mysqlconsultas{
 
-    public function crearsesion($id, $id_campus, $id_area, $nombre, $nivel, $calendario, $color){
+    public function crearsesion($id, $id_empresa, $empresa, $nombre, $nivel, $color){
 
         if (session_status() == PHP_SESSION_NONE) {
             ini_set("session.cookie_lifetime","86400");
@@ -16,17 +16,18 @@ class newsesion extends mysqlconsultas{
         }
         // session_start();
         $_SESSION['id_admin'] = $id;
-		$_SESSION['empresa'] = $id_campus;
-		$_SESSION['area'] = $id_area;
+		$_SESSION['id_empresa'] = $id_empresa;
 		$_SESSION['nombre'] = $nombre;
 		$_SESSION['nivel'] = $nivel;
         $_SESSION['color'] = $color;
-        $_SESSION['calendario'] = $calendario;
+        $_SESSION['empresa'] = $empresa;
 
     }
 
     public function login($usuario, $password){
-        $qry = "SELECT * FROM usuarios WHERE correo = '$usuario' AND pass = '$password'";
+        $qry = "SELECT u.*, e.nombre AS empresa FROM usuarios u 
+                LEFT JOIN empresas e ON e.id = u.id_empresa
+                WHERE u.correo = '$usuario' AND u.pass = '$password'";
         $res = $this->consulta($qry);
         return $res;
     }

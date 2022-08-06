@@ -115,6 +115,30 @@ function fnvalidar(){
    
 }
 
+function nuevoRegistro(){
+    $.ajax({
+        type: "POST",
+        url: "admin/scripts/registro",
+        data: $("#frmRegistro").serialize(),
+        success: function (response){
+            if(response == 1){
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Genial!',
+                    text: 'Ya estas registrado correctamente!'
+                })
+            }else if(response = "-1"){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algo ha salido mal, vuelve a intentarlo',
+                    footer: '<a href="">¿El problema persiste?</a>'
+                })
+            }
+        }
+    })
+}
+
 function is_chrome() {
     var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
     if (is_chrome == 'false' || is_chrome == 0) {

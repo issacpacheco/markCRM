@@ -109,7 +109,7 @@ CREATE TABLE `prospectos`  (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(75) NULL,
   `apellido_paterno` varchar(75) NULL,
-  `apellido_materno` varchar NULL,
+  `apellido_materno` varchar(75) NULL,
   `edad` int(10) NULL,
   `fch_nacimiento` date NULL,
   `genero` int(10) NULL,

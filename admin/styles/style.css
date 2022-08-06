@@ -5648,3 +5648,7 @@ body.no-pace .pace, body.no-pace .pace .pace-progress {
   width: 100% !important;
   z-index: 10000;
 }
+
+.top10{
+  margin-top: 10px;
+}

@@ -16,13 +16,12 @@ $inicio = $logeo['id'][0];
 
 if($inicio > 0){
     $id             = $logeo['id'][0];
-    $id_campus      = "empresa";
-    $id_area        = $logeo['id_area'][0];
+    $id_empresa     = $logeo['id_empresa'][0];
+    $empresa        = $logeo['empresa'][0];
     $nombre         = $logeo['nombre'][0];
     $nivel          = $logeo['nivel'][0];
-    $calendario     = $logeo['iframe_google'][0];
-    $color          = $logeo['tema_color'][0];
-    $nueva_sesion   = $get->crearsesion($id, $id_campus, $id_area, $nombre, $nivel,$calendario,$color);
+    $color          = $logeo['aspecto'][0];
+    $nueva_sesion   = $get->crearsesion($id, $id_empresa, $empresa, $nombre, $nivel, $color);
     echo "1";
 }else{
     echo "0";
