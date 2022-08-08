@@ -33,6 +33,12 @@
                 </a>
                 <ul class="collapse nav primary essubmenu" id="submenuoperaciones">
                     <li>
+                        <a onclick="getPageMenu('pr-prospectos')">
+                        <i class="fas fa-users-class white"></i>
+                            <span class="white">Prospectos</span>
+                        </a>
+                    </li>
+                    <li>
                         <a onclick="getPageMenu('pr-grupos')">
                         <i class="fas fa-users-class white"></i>
                             <span class="white">Prospectos asignados</span>
